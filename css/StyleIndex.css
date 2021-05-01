@@ -1,5 +1,5 @@
 :root{
-    --container-color: rgba(33, 97, 150, 0.6);
+    --container-color: rgba(67, 141, 184, 0.6);
     --hoover-color: rgb(134, 113, 172, 0.6);
     --background-color: rgb(255, 246, 213);
     --text-color: rgb(255, 255, 255);
@@ -36,10 +36,7 @@ nav{
 .link{
     padding: 20px;
     color: var(--text-color);
-    font-family:Vegur, 'PT Sans', Verdana, sans-serif;
-    font-size: 18px;
     display: block;
-    font-weight: bold;
 }
 
 .sub-link{
@@ -51,9 +48,6 @@ nav{
     padding: 15px;
     color: var(--text-color);
     background-color: var(--container-color);
-    font-family:Vegur, 'PT Sans', Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
     width: 112px;
 }
 
