@@ -1,0 +1,74 @@
+:root{
+    --container-color: rgb(150, 113, 33);
+    --hoover-color: rgb(246,209,216);
+    --background-color: rgb(255, 246, 213);
+    --text-color: rgb(252, 245, 220);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+nav{
+    display: flex;
+    background-color: var(--container-color);
+}
+
+.Principales > li{
+    float: left;
+}
+
+.BN-D{
+    margin-left: auto;
+}
+
+.link{
+    padding: 20px;
+    color: var(--text-color);
+    font-family:Vegur, 'PT Sans', Verdana, sans-serif;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+}
+
+.sub-link{
+    display: none;
+    position: absolute;
+}
+
+.subL{
+    padding: 15px;
+    color: var(--text-color);
+    background-color: var(--container-color);
+    font-family:Vegur, 'PT Sans', Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 112px;
+}
+
+.subL:hover{
+    background-color: var(--hoover-color);
+    color: var(--container-color);
+}
+
+.link:hover{
+    background-color: var(--hoover-color);
+    color: var(--container-color);
+}
+
+.link:hover ~ .sub-link{
+    display: block;
+}
+
+.sub-link:hover{
+    display: block;
+}
