@@ -1,6 +1,6 @@
 :root{
     --container-color: rgba(67, 141, 184, 0.6);
-    --hoover-color: rgb(134, 113, 172, 0.6);
+    --hoover-color: rgb(168, 139, 235, 0.6);
     --background-color: rgb(255, 246, 213);
     --text-color: rgb(255, 255, 255);
 }
@@ -22,6 +22,7 @@ body{
 
 nav{
     display: flex;
+    justify-content: space-around;
     background-color: var(--container-color);
 }
 
@@ -34,7 +35,7 @@ nav{
 }
 
 .link{
-    padding: 20px;
+    padding: 17px;
     color: var(--text-color);
     display: block;
 }
@@ -45,7 +46,7 @@ nav{
 }
 
 .subL{
-    padding: 15px;
+    padding: 13px;
     color: var(--text-color);
     background-color: var(--container-color);
     width: 112px;
@@ -70,12 +71,26 @@ nav{
 .sub-link:hover{
     display: block;
 }
+.container{
+    margin:  10px;
+}
+#hip{
+    animation: raibonw 1700ms alternate-reverse infinite;
+}
 
 @keyframes shadow-pulse {
     0%{
-        box-shadow: 0 0 0 0 rgba(168, 139, 235, 0.8);
+        box-shadow: 0 0 0 0 rgba(203, 185, 245, 0.8);
     }
     100%{
         box-shadow: 0 0 16px 24px rgba(57, 132, 182, 0);
+    }
+}
+@keyframes raibonw {
+    0%{
+        color: rgb(169, 151, 233);
+    }
+    100%{
+        color: rgb(116, 241, 241);
     }
 }
