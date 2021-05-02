@@ -25,21 +25,21 @@
         </nav>
         <div class="body-container">
             <form name="DatosProducto" method="POST" action="" class="formAdd">
-                <h1>Iniciar Sesion</h1>
+                <h1>Agregar Productos</h1>
                 <div class="row-wrapper">
                     <div class="column-wrapper">
                         <label>Producto</label>
                         <br>
                         <input type="text" readonly="readonly" class="error" name="err1">
                         <br>
-                        <div class="escribir"><div class="icon"><i class="fas fa-ice-cream"></i></div><input type="text" name="producto" onkeypress="return validarUsu(event)" class="answer"></div>
+                        <div class="escribir"><div class="icon"><i class="fas fa-ice-cream"></i></div><input type="text" name="producto" onkeypress="return validarProduct(event)" class="answer"></div>
                     </div>
                     <div class="column-wrapper">
                         <label>Precio</label>
                         <br>
                         <input type="text" readonly="readonly" class="error" name="err2">
                         <br>
-                        <div class="escribir"><div class="icon"><i class="fas fa-dollar-sign"></i></div><input type="text" name="precio" onkeypress="return validarPass(event)" class="answer"></div>
+                        <div class="escribir"><div class="icon"><i class="fas fa-dollar-sign"></i></div><input type="text" name="precio" onkeypress="return validarPrice(event)" class="answer"></div>
                     </div>
                 </div>
                 <div class="row-wrapper">
@@ -48,14 +48,14 @@
                         <br>
                         <input type="text" readonly="readonly" class="error" name="err3">
                         <br>
-                        <div class="escribir"><div class="icon"><i class="fas fa-percentage"></i></div><input type="text" name="descuento" onkeypress="return validarUsu(event)" class="answer"></div>
+                        <div class="escribir"><div class="icon"><i class="fas fa-percentage"></i></div><input type="text" name="descuento" onkeypress="return validarNum(event)" class="answer"></div>
                     </div>
                     <div class="column-wrapper">
                         <label>Descripcion</label>
                         <br>
                         <input type="text" readonly="readonly" class="error" name="err4">
                         <br>
-                        <div class="escribir"><textarea name="descripcion" class="desc"></textarea></div>
+                        <div class="escribir"><textarea name="descripcion" class="desc" onkeypress="return validarText(event)"></textarea></div>
                     </div>
                 </div>
                 <div class="botonCRUD">
@@ -93,5 +93,6 @@
             </div>
         </footer>
     </div>
+    <script src="./js/administrador.js"></script>
 </body>
 </html>
