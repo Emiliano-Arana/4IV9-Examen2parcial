@@ -1,8 +1,8 @@
 :root{
-    --container-color: rgb(150, 113, 33);
-    --hoover-color: rgb(246,209,216);
+    --container-color: rgba(67, 141, 184, 0.6);
+    --hoover-color: rgb(168, 139, 235, 0.6);
     --background-color: rgb(255, 246, 213);
-    --text-color: rgb(252, 245, 220);
+    --text-color: rgb(255, 255, 255);
 }
 
 *{
@@ -15,11 +15,13 @@ ul{
 }
 
 body{
-    background-color: var(--background-color);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 nav{
     display: flex;
+    justify-content: space-around;
     background-color: var(--container-color);
 }
 
@@ -32,12 +34,9 @@ nav{
 }
 
 .link{
-    padding: 20px;
+    padding: 17px;
     color: var(--text-color);
-    font-family:Vegur, 'PT Sans', Verdana, sans-serif;
-    font-size: 18px;
     display: block;
-    font-weight: bold;
 }
 
 .sub-link{
@@ -46,23 +45,22 @@ nav{
 }
 
 .subL{
-    padding: 15px;
+    padding: 13px;
     color: var(--text-color);
     background-color: var(--container-color);
-    font-family:Vegur, 'PT Sans', Verdana, sans-serif;
-    font-size: 15px;
-    font-weight: bold;
     width: 112px;
 }
 
 .subL:hover{
     background-color: var(--hoover-color);
-    color: var(--container-color);
+    color: white;
+    animation: shadow-pulse 1200ms 1;
 }
 
 .link:hover{
     background-color: var(--hoover-color);
-    color: var(--container-color);
+    color: white;
+    animation: shadow-pulse 1200ms 1;
 }
 
 .link:hover ~ .sub-link{
@@ -71,4 +69,13 @@ nav{
 
 .sub-link:hover{
     display: block;
+}
+
+@keyframes shadow-pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(203, 185, 245, 0.9);
+    }
+    100%{
+        box-shadow: 0 0 16px 24px rgba(57, 132, 182, 0);
+    }
 }

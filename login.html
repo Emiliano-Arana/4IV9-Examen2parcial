@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/StyleSesion.css">
-    <link rel="stylesheet" href="./css/StyleIndex.css">
+    <link rel="stylesheet" href="./css/StyleNav.css">
     <script src="https://kit.fontawesome.com/341b72a6e8.js" crossorigin="anonymous"></script>
-    <title>Inicio</title>
+    <title>Iniciar Sesion</title>
 </head>
 <body>
     <div class="main-container">
@@ -30,23 +30,35 @@
             </div>
         </nav>
         <div class="body-container">
-                <form>
-                    <div class="campo" id="cI">
-                        <label>Usuario</label>
+            <form name="IniciarSesion" method="POST" action="">
+                <h1>Iniciar Sesion</h1>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Username</label>
                         <br>
-                        <input type="text" readonly="readonly" class="error" name="errorUsu" id="Err1" value="*prueba">
+                        <input type="text" readonly="readonly" class="error" name="err1">
                         <br>
-                        <div class="icon"><i class="fas fa-user"></i></div><input type="text" name="usuario" onkeypress="return validarUsu(event)" class="answer">
+                        <div class="escribir"><div class="icon"><i class="fas fa-user"></i></div><input type="text" name="usuario" onkeypress="return validarUsu(event)" class="answer"></div>
                     </div>
-                    <div class="campo" id="cD">
+                    <div class="column-wrapper">
                         <label>Contraseña</label>
                         <br>
-                        <input type="text" readonly="readonly" class="error" name="errorPass" id="Err2">
+                        <input type="text" readonly="readonly" class="error" name="err2">
                         <br>
-                        <div class="icon"><i class="fas fa-lock"></i></div><input type="text" name="password" onkeypress="return validarPass(event)" class="answer">
+                        <div class="escribir"><div class="icon"><i class="fas fa-lock"></i></div><input type="text" name="password" onkeypress="return validarPass(event)" class="answer"></div>
                     </div>
-                </form>
+                </div>
+                <div class="row-wrapper">
+                    <div class="column-wrapper-boton">
+                        <input type="submit" value="Iniciar Sesion" class="boton" onclick="return validarDatos()">
+                    </div>
+                    <div class="column-wrapper-boton">
+                        <div class="boton"><a href="./register.html">Registrar</a></div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>

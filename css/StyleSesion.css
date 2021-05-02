@@ -9,20 +9,40 @@
     justify-content: center;
 }
 
+h1{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(67, 141, 184);
+    font-weight: bold;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
 label{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     font-weight: bold;
     color: var(--text);
     display: block;
-    padding: 5px;
+    padding-bottom: 5px;
 }
 
-.campo{
-    padding: 10px;
-    height: 200px;
-    width: fit-content;
+.column-wrapper{
     margin: 20px;
+}
+
+.column-wrapper-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.row-wrapper{
+    display: list-item;
+    align-items: center;
+    list-style: none;
 }
 
 .answer{
@@ -45,9 +65,14 @@ label{
 
 .error{
     border: none;
+    width: 250px;
     background: none;
     color: red;
     height: 15px;
+}
+
+.escribir{
+    display: inline-block;
 }
 
 .icon{
@@ -61,14 +86,48 @@ label{
     float: left;
 }
 
-form{
-    display: flex;
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
-.cI{
-    float: left;
+.container-boton{
+    text-align: center;
 }
 
-.cD{
-    float: right;
+.boton{
+    padding: 10px;
+    background-color: rgba(67, 141, 184, 0.6);
+    cursor: pointer;
+    border: 0;
+    box-shadow: 2px 2px 1px rgba(67, 141, 184, 0.267);
+    font-size: 20px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.boton:hover{
+    box-shadow: 2px 2px 1px rgba(168, 139, 235, 0.144);
+    background-color: rgb(168, 139, 235, 0.6);
+}
+
+@media (min-width: 1000px) {
+    .column-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .column-wrapper-boton{
+        display: flex;
+        flex-direction: column;
+    }
 }
