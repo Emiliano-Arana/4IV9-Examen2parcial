@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleSesion.css">
+    <link rel="stylesheet" href="./css/StyleIndex.css">
+    <script src="https://kit.fontawesome.com/341b72a6e8.js" crossorigin="anonymous"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <div class="BN-I">
+                <ul class="Principales">
+                    <li><a class="link">Inicio</a></li>
+                    <li><a class="link" id="productos">Productos</a>
+                        <ul class="sub-link">
+                            <li class="subL"><a>Helados</a></li>
+                            <li class="subL"><a>Ofertas</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="link">Conocenos</a></li>
+                    <li><a class="link">Carrito</a></li>
+                </ul>
+            </div>
+            <div class="BN-D">
+                <a class="link" href="./login.html">Log In/Sign In</a>
+            </div>
+        </nav>
+        <div class="body-container">
+                <form>
+                    <div class="campo" id="cI">
+                        <label>Usuario</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" name="errorUsu" id="Err1" value="*prueba">
+                        <br>
+                        <div class="icon"><i class="fas fa-user"></i></div><input type="text" name="usuario" onkeypress="return validarUsu(event)" class="answer">
+                    </div>
+                    <div class="campo" id="cD">
+                        <label>Contraseña</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" name="errorPass" id="Err2">
+                        <br>
+                        <div class="icon"><i class="fas fa-lock"></i></div><input type="text" name="password" onkeypress="return validarPass(event)" class="answer">
+                    </div>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
