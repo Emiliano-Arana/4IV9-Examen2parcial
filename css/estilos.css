@@ -13,5 +13,14 @@
 }
 #burn{
     font-family: 'happy';
+    font-size: 64px;
+}
+#con{
+    font-family: 'happy';
     font-size: 48px;
+}
+#dis{
+    font-family: 'happy';
+    font-size: 30px;
+    color: white;
 }
