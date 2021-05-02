@@ -28,6 +28,7 @@ nav{
     background-color: var(--container-color);
 }
 form {
+    font-family: 'Lobster', cursive;
     background: rgba(75, 124, 170, 0.4);
     width: 450px;
     margin: auto;
@@ -36,6 +37,7 @@ form {
     border-radius: 10px;
 }
 input, textarea{
+    font-family: 'Lobster', cursive;
     margin-top: 10px;
     width: 100%;
     margin-bottom: 20px;
@@ -49,6 +51,7 @@ input:hover{
     animation: shadow-pulse 1000ms 1;
 }
 textarea:hover{
+    font-family: 'Lobster', cursive;
     transform: translateY(-3px);
     animation: shadow-pulse 1000ms 1;
 }
@@ -146,6 +149,7 @@ i{
     animation: shadow-pulsef 1000ms 1;
 }
 #instagram{
+    border-radius: 10%;
     color: white
 }
 #instagram:hover{
@@ -155,6 +159,7 @@ i{
     animation: rotate 1000ms 1;
 }
 #correo{
+    border-radius: 10%;
     color: white;
 }
 #correo:hover{
@@ -164,6 +169,7 @@ i{
     animation: shadow-pulsec 1000ms 1;
 }
 #twitter{
+    border-radius: 10%;
     color:white
 }
 #twitter:hover{
