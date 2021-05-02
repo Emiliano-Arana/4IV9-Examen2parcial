@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/StyleIndex.css">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a78d4ea77b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -33,7 +35,7 @@
         <h1 id=hip>Ben and Jerry's</h1>
 
         <div class="container">
-            <img src="./img/prueba.jpg" width="1200px" height="500px">
+            <img src="./img/prueba.jpg" width="1200px" height="500px" id="otro">
         </div>
         <div class="inform">
             <div>
@@ -48,10 +50,10 @@
             <div class=formulario>
                 <form action="">
                     <p id=dis>Formulario de contacto</p>
-                    <input type="text" name="Nombre" placeholder="Nombre">
-                    <input type="text" name="Apellido" placeholder="Apellido">
-                    <input type="email" name="Correo" placeholder="Correo">
-                    <textarea name="mensaje" placeholder="Escriba su mensaje" cols="30" rows="10"></textarea>
+                    <input type="text" name="Nombre" placeholder="Nombre" id=campo>
+                    <input type="text" name="Apellido" placeholder="Apellido" id=campo>
+                    <input type="email" name="Correo" placeholder="Correo" id=campo>
+                    <textarea name="mensaje" placeholder="Escriba su mensaje" cols="30" rows="10" id=campo></textarea>
                     <input type="button" value="Enviar" id="boton">
                 </form>
             </div>
