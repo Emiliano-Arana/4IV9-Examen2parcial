@@ -1,78 +1,12 @@
-
-.botonCRUD{
-    display: flex;
-    justify-content: center;
-}
-
-tr{
-    text-align: center;
-}
-
-td{
-    padding: 5px;
-    color: rgb(255, 255, 255);
-}
-
-.id{
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    text-align: center;
-    width: 30px;
-}
-
-.tableButton{
-    width: 80px;
-    background-color: rgba(67, 141, 184, 0.808);
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    font-size: 15px;
-    padding: 3px;
-    cursor: pointer;
-}
-
-.productos{
-    background-color: rgba(67, 141, 184, 0.6);
-    display: flex;
-    justify-content: center;
-}
-
-#producto{
-    width: 250px;
-}
-
-#id{
-    width: 30px;
-}
-
-#precio{
-    width: 50px;
-}
-
-.desc{
-    margin-top: 5px;
-    width: 250px;
-    height: 60px;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 5px;
-    background-color:rgba(240, 248, 255, 0);
-    border-top: 0;
-    border-right: 0;
-    border-bottom: 2px rgb(255, 255, 255);
-    border-left: 2px rgb(255, 255, 255);
-    border-style: solid;
-    float: right;
-    background-color: rgba(67, 141, 184, 0.418);
-    color: aliceblue;
-}
 :root{
     --text: rgb(255, 255, 255);
 }
 
 .body-container{
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
     padding-bottom: 100px;
-    text-align: center;
 }
 
 @font-face {
@@ -83,7 +17,7 @@ td{
 .head{
     font-family: 'happy';
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 h1{
@@ -165,11 +99,6 @@ label{
     float: left;
 }
 
-.formAdd{
-    position: relative;
-    margin-bottom: 50px;
-}
-
 a{
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -196,20 +125,7 @@ a{
     background-color: rgb(168, 139, 235, 0.6);
 }
 
-@media (min-width: 720px) {
-    .body-container{
-        display: flex;
-        justify-content: center;
-    }
-
-    .productos{
-        background-color: rgba(67, 141, 184, 0.6);
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (min-width: 1100px) {
+@media (min-width: 800px) {
     .column-wrapper{
         display: flex;
         flex-direction: column;

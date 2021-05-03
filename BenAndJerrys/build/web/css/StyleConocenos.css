@@ -5,6 +5,10 @@
     --text-color: rgb(255, 255, 255);
 }
 
+a{
+    text-decoration: none;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -15,7 +19,7 @@ ul{
 }
 
 body{
-    background: url("../img/helado.jpg");
+    background-image: linear-gradient(to bottom,rgb(146, 105, 201),rgb(223, 191, 46));
     background-size: 100vw 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -45,10 +49,6 @@ input, textarea{
     box-sizing: border-box;
     border: none;
     border-radius: 10px;
-}
-
-a{
-    text-decoration: none;
 }
 input:hover{
     transform: translateY(-3px);
@@ -114,12 +114,6 @@ textarea{
     display: block;
     cursor: pointer;
 }
-.container{
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 .inform{
     display: flex;
     justify-content: space-around;
@@ -130,8 +124,14 @@ textarea{
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.formulario{
-    margin-top: 10px;
+.ino{
+    background: url(../img/conocenos.jpg);
+    background-size: 100vw 50vw;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 10px;
+    display: flex;
+    border-radius: 10px;
 }
 i{
     transition: .3s ease;
@@ -199,39 +199,30 @@ i{
     text-align: center;
     justify-content: center;
 }
-img{
-    border-radius: 10%;
-    border:5px solid rgb(46, 28, 14) ;
-    opacity: 100%;
+.bussines{
+    text-align: center;
 }
 footer{
     margin-top: 50px;
     padding: 10px;
     background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(138, 138, 138));
 }
-#boton{
-    border-radius: 10px ;
-    background-color: #31384a;
-    border: 3px solid #31384a;
-    color: white;
-}
-#boton:hover{
-    cursor: pointer;
-    animation: shadow-pulse 1000ms 1;
+img{
+    border-radius: 10px;
+    border: 3px solid rgb(90, 58, 21);
 }
 #nom{
     color: white;
     font-size: 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.formulario{
+    margin-top: 10px;
+}
 #con{
     color: white;
     text-align: center;
 }
-#otro{
-    opacity: 80%;
-}
-
 @keyframes shadow-pulse {
     0%{
         box-shadow: 0 0 0 0 rgba(203, 185, 245, 0.9);
@@ -274,10 +265,10 @@ footer{
 }
 @keyframes raibonws {
     0%{
-        color: rgb(198, 255, 176);
+        color: rgb(127, 63, 245);
     }
     100%{
-        color: rgb(255, 255, 255);
+        color: rgb(65, 137, 245);
     }
 }
 @keyframes rotate {

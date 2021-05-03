@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleNav.css">
+    <link rel="stylesheet" href="./css/StyleAdmin.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://kit.fontawesome.com/341b72a6e8.js" crossorigin="anonymous"></script>
+    <title>Agregar</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <div class="BN-I">
+                <ul class="Principales">
+                    <li id="full"><a class="link" href="index.html">Cerrar Sesion</a></li>
+                    <li id="full"><a class="link" href="eliminarProducto.html">Eliminar</a></li>
+                    <li id="full"><a class="link" href="administrar.html">Agregar</a></li>
+                </ul>
+            </div>
+            <div class="BN-D">
+                <a id="full" class="link">Administrador</a>
+            </div>
+        </nav>
+        <div class="body-container">
+            <form name="DatosProducto" method="POST" action="" class="formAdd">
+                <h1>Editar Productos</h1>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Producto</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" name="err1">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-ice-cream"></i></div><input type="text" name="producto" onkeypress="return validarProduct(event)" class="answer"></div>
+                    </div>
+                    <div class="column-wrapper">
+                        <label>Precio</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" name="err2">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-dollar-sign"></i></div><input type="text" name="precio" onkeypress="return validarPrice(event)" class="answer"></div>
+                    </div>
+                </div>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Descuento</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" name="err3">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-percentage"></i></div><input type="text" name="descuento" onkeypress="return validarNum(event)" class="answer"></div>
+                    </div>
+                    <div class="column-wrapper">
+                        <label>Descripcion</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" name="err4">
+                        <br>
+                        <div class="escribir"><textarea name="descripcion" class="desc" onkeypress="return validarText(event)"></textarea></div>
+                    </div>
+                </div>
+                <div class="botonCRUD">
+                    <input type="submit" value="Actualizar" class="boton" onclick="return validarDatos()">
+                </div>
+            </form>
+            <div class="productos">
+                <table>
+                    <tr class="head">
+                        <td>ID</td>
+                        <td>Producto</td>
+                        <td>Precio</td>
+                    </tr>
+                    <tr>
+                        <td id="id">2</td>
+                        <td id="producto">Chocolate</td>
+                        <td id="precio">$20</td>
+                    </tr>
+                    <tr>
+                        <td id="id">2</td>
+                        <td id="producto">Chocolate</td>
+                        <td id="precio">$20</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <div class=nombres>
+                <p id="nom">Hecho por</p>
+                <br>
+                <p id="nom">Arana Chavez Emiliano</p>
+                <br>
+                <p id="nom">Lizarraga Anguiano Jesus Adrian</p>
+                <br>
+                <p id="nom">Núñez Manrique Cuauhtemoc Emmanuel</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/administrador.js"></script>
+</body>
+</html>

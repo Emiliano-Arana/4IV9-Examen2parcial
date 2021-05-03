@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleNav.css">
+    <link rel="stylesheet" href="./css/StyleAdmin.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://kit.fontawesome.com/341b72a6e8.js" crossorigin="anonymous"></script>
+    <title>Eliminar</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <div class="BN-I">
+                <ul class="Principales">
+                    <li id="full"><a class="link" href="index.html">Cerrar Sesion</a></li>
+                    <li id="full"><a class="link" href="administrar.html">Agregar</a></li>
+                    <li id="full"><a class="link" href="editarProducto.html">Actualizar</a></li>
+                </ul>
+            </div>
+            <div class="BN-D">
+                <a id="full" class="link">Administrador</a>
+            </div>
+        </nav>
+        <div class="body-container">
+            <div class="productos">
+                <table>
+                    <tr class="head">
+                        <td>ID</td>
+                        <td>Producto</td>
+                        <td>Precio</td>
+                    </tr>
+                    <tr>
+                        <form action="" name="eliminar" method="POST">
+                            <td id="id"><input value="1" class="id" readonly="readonly" name="id"></td>
+                            <td id="producto">Chocolate</td>
+                            <td id="precio">$20</td>
+                            <td><input type="submit" value="Eliminar" onclick="return validarDatos()" class="tableButton"></td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <form action="" name="eliminar" method="POST">
+                            <td id="id"><input value="1" class="id" readonly="readonly" name="id"></td>
+                            <td id="producto">Chocolate</td>
+                            <td id="precio">$20</td>
+                            <td><input type="submit" value="Eliminar" onclick="return validarDatos()" class="tableButton"></td>
+                        </form>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <div class=nombres>
+                <p id="nom">Hecho por</p>
+                <br>
+                <p id="nom">Arana Chavez Emiliano</p>
+                <br>
+                <p id="nom">Lizarraga Anguiano Jesus Adrian</p>
+                <br>
+                <p id="nom">Núñez Manrique Cuauhtemoc Emmanuel</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
