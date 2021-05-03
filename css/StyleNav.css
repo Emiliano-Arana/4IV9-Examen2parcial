@@ -5,6 +5,24 @@
     --text-color: rgb(255, 255, 255);
 }
 
+a{
+    text-decoration: none;
+}
+
+.subL a{
+    color: var(--text-color);
+}
+
+@font-face {
+    font-family: 'happy';
+    src: url(../fonts/Lf.otf);
+}
+
+#full{
+    font-family: 'happy';
+    font-size: 33.3px;
+}
+
 html {
     min-height: 100%;
     position: relative;
@@ -29,6 +47,7 @@ body{
 nav{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: var(--container-color);
 }
 
@@ -39,6 +58,7 @@ nav{
 .BN-D{
     margin-left: auto;
 }
+
 
 .link{
     padding: 17px;
