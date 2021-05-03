@@ -5,32 +5,13 @@
     --text-color: rgb(255, 255, 255);
 }
 
-.body-container{
-    margin-bottom: 0;
-}
-
 a{
     text-decoration: none;
-}
-
-.subL a{
-    color: var(--text-color);
-}
-
-@font-face {
-    font-family: 'happy';
-    src: url(../fonts/Lf.otf);
-}
-
-html {
-    min-height: 100%;
-    position: relative;
 }
 
 *{
     padding: 0;
     margin: 0;
-    border: none;
 }
 
 ul{
@@ -38,7 +19,8 @@ ul{
 }
 
 body{
-    background: url("../img/helado.jpg");
+    background-image: linear-gradient(to bottom,rgb(146, 105, 201),rgb(223, 191, 46));
+    background-size: 100vw 100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -49,7 +31,7 @@ nav{
     justify-content: space-around;
     background-color: var(--container-color);
 }
-.formulario form {
+form {
     font-family: 'Lobster', cursive;
     background: rgba(75, 124, 170, 0.4);
     width: 450px;
@@ -58,7 +40,7 @@ nav{
     box-sizing: border-box;
     border-radius: 10px;
 }
-.formulario form input, .formulario form textarea{
+input, textarea{
     font-family: 'Lobster', cursive;
     margin-top: 10px;
     width: 100%;
@@ -68,16 +50,16 @@ nav{
     border: none;
     border-radius: 10px;
 }
-.formulario form input:hover{
+input:hover{
     transform: translateY(-3px);
     animation: shadow-pulse 1000ms 1;
 }
-.formulario form textarea:hover{
+textarea:hover{
     font-family: 'Lobster', cursive;
     transform: translateY(-3px);
     animation: shadow-pulse 1000ms 1;
 }
-.formulario form textarea{
+textarea{
     min-height: 100px;
     max-height: 300px;
     min-width: 100%;
@@ -109,18 +91,6 @@ nav{
     width: 112px;
 }
 
-.link:hover{
-    cursor: pointer;
-    background-color: var(--hoover-color);
-    color: white;
-    animation: shadow-pulse 1200ms 1;
-}
-
-.link:hover ~ .sub-link{
-    display: block;
-    cursor: pointer;
-}
-
 .subL:hover{
     cursor: pointer;
     background-color: var(--hoover-color);
@@ -128,11 +98,6 @@ nav{
     animation: shadow-pulse 1200ms 1;
 }
 
-.sub-link:hover{
-    display: block;
-    cursor: pointer;
-}
-
 .link:hover{
     cursor: pointer;
     background-color: var(--hoover-color);
@@ -149,15 +114,34 @@ nav{
     display: block;
     cursor: pointer;
 }
-
-.formulario{
-    margin-top: 10px;
+.inform{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    text-align: center;
+    color:  rgb(226, 244, 255);
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
+.ino{
+    background: url(../img/conocenos.jpg);
+    background-size: 100vw 50vw;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 10px;
+    display: flex;
+    border-radius: 10px;
+}
 i{
     transition: .3s ease;
 }
-
+#hip{
+    animation: raibonw 2500ms alternate-reverse infinite;
+}
+#burn{
+    animation: raibonws 2500ms alternate-reverse infinite;
+}
 #facebook{
     border-radius: 10%;
     color: white;
@@ -215,33 +199,30 @@ i{
     text-align: center;
     justify-content: center;
 }
-
+.bussines{
+    text-align: center;
+}
 footer{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+    margin-top: 50px;
+    padding: 10px;
     background-image: linear-gradient(to top, rgb(0, 0, 0), rgb(138, 138, 138));
 }
-#boton{
-    border-radius: 10px ;
-    background-color: #31384a;
-    border: 3px solid #31384a;
-    color: white;
-}
-#boton:hover{
-    cursor: pointer;
-    animation: shadow-pulse 1000ms 1;
+img{
+    border-radius: 10px;
+    border: 3px solid rgb(90, 58, 21);
 }
 #nom{
     color: white;
     font-size: 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.formulario{
+    margin-top: 10px;
+}
 #con{
     color: white;
     text-align: center;
 }
-
 @keyframes shadow-pulse {
     0%{
         box-shadow: 0 0 0 0 rgba(203, 185, 245, 0.9);
@@ -284,10 +265,10 @@ footer{
 }
 @keyframes raibonws {
     0%{
-        color: rgb(198, 255, 176);
+        color: rgb(127, 63, 245);
     }
     100%{
-        color: rgb(255, 255, 255);
+        color: rgb(65, 137, 245);
     }
 }
 @keyframes rotate {
