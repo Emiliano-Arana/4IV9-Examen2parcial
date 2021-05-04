@@ -19,6 +19,17 @@
         .body-container{
             margin-bottom: 750px;
         }
+        p{
+            text-align: center;
+            color: red;
+        }
+        
+        .botonIngresar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px
+        }
     </style>
     </head>
     <body>
@@ -39,130 +50,145 @@
                 Class.forName(driver);
                 con = DriverManager.getConnection(url, userName, password);
                 
-                
-                try{
-                    String q = "select * from users";
-                    String username,pass;
-                    username = request.getParameter("usuario");
-                    pass = request.getParameter("password");
-                    boolean rep=false;
-                            
-                    set = con.createStatement();
-                    rs = set.executeQuery(q);
-                    while(rs.next()){
-                        if(rs.getString("usu").equals(username)&&rs.getString("pass").equals(pass)){
-                            int id = rs.getInt("id");
-                            rep = true;
-                        }
-                    }
-                    if(rep){
-                        %>
-                        <nav>
-                            <div class="BN-I">
-                                <ul class="Principales">
-                                    <li id="full"><a class="link" href="./index.html">Inicio</a></li>
-                                    <li id="full"><a class="link" id="productos">Productos</a>
-                                        <ul class="sub-link">
-                                            <li class="subL" id="full"><a>Helados</a></li>
-                                            <li class="subL" id="full"><a>Ofertas</a></li>
-                                        </ul>
-                                    </li>
-                                    <li id="full"><a class="link" href="./conocenos.html">Conocenos</a></li>
-                                    <li id="full"><a class="link" href="./compra.html">Carrito</a></li>
-                                </ul>
-                            </div>
-                            <div class="BN-D">
-                                <a class="link" id="full" href="./login.html"><%=username%></a>
-                            </div>
-                        </nav>
-                        <h1 id=hip>Ben and Jerry's</h1>
-
-                        <div class="container">
-                            <img src="./img/prueba.jpg" width="1200px" height="500px" id="otro">
-                        </div>
-                        <div class="inform">
-                            <div>
-                                <p id=burn>Descubre una sabor que mueva tus sentidos</p>
-                                <p>Contamos con gran variedad de sabores que te haran tener una experiencia unica en tu boca</p>
-                                <p id=dis>¡¡¡DISFRUTALOS!!!</p>
-                            </div>
-                            <img src="./img/sensa.jpg" width="500px" height="300px">
-                        </div>
-                        <div class="inform">
-                            <img src="./img/INGR.jpg" width="500px" height="300px">
-                            <div>
-                                <p id=burn>Ingredientes conscientes</p>
-                                <p>¡Nuestros ingredientes promueven un cambio positivo y eso hace que nuestro helado tenga un sabor</p>
-                                <p id=dis>¡¡¡sensacional!!!</p>
-                            </div>
-                        </div>
-                        <%
-                    }else{
-                        %>
-                        <nav>
-                            <div class="BN-I">
-                                <ul class="Principales">
-                                    <li id="full"><a class="link" href="./index.html">Inicio</a></li>
-                                    <li id="full"><a class="link" id="productos">Productos</a>
-                                        <ul class="sub-link">
-                                            <li class="subL" id="full"><a>Helados</a></li>
-                                            <li class="subL" id="full"><a>Ofertas</a></li>
-                                        </ul>
-                                    </li>
-                                    <li id="full"><a class="link" href="./conocenos.html">Conocenos</a></li>
-                                    <li id="full"><a class="link" href="./compra.html">Carrito</a></li>
-                                </ul>
-                            </div>
-                            <div class="BN-D">
-                                <a class="link" id="full" href="./login.html">Log In/Sign In</a>
-                            </div>
-                        </nav>
-                        <div class="body-container">
-                            <form name="IniciarSesion" method="POST" action="">
-                                <h1>Iniciar Sesion</h1>
-                                <p>No se encontro regsitros</p>
-                                <div class="row-wrapper">
-                                    <div class="column-wrapper">
-                                        <label>Username</label>
-                                        <br>
-                                        <input type="text" readonly="readonly" class="error" name="err1">
-                                        <br>
-                                        <div class="escribir"><div class="icon"><i class="fas fa-user"></i></div><input type="text" name="usuario" onkeypress="return validarUsu(event)" class="answer"></div>
-                                    </div>
-                                    <div class="column-wrapper">
-                                        <label>Contraseña</label>
-                                        <br>
-                                        <input type="text" readonly="readonly" class="error" name="err2">
-                                        <br>
-                                        <div class="escribir"><div class="icon"><i class="fas fa-lock"></i></div><input type="text" name="password" onkeypress="return validarPass(event)" class="answer"></div>
-                                    </div>
-                                </div>
-                                <div class="row-wrapper">
-                                    <div class="column-wrapper-boton">
-                                        <input type="submit" value="Iniciar Sesion" class="boton" onclick="return validarDatos()">
-                                    </div>
-                                    <div class="column-wrapper-boton">
-                                        <div class="boton"><a href="./register.html">Registrar</a></div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <%
-                    }
-                        set.close();
-                        
-                
-                }catch(SQLException ed){
-                    System.out.println("Error al registrar en la tabla");
-                    System.out.println(ed.getMessage());
+                if(request.getParameter("usuario").equals("admin9")&&request.getParameter("password").equals("3927")){
                     %>
-                    
-                    <h1>Error</h1>
+                    <nav>
+                        <div class="BN-I">
+                            
+                        <div class="BN-D">
+                            
+                        </div>
+                    </nav>
+                    <div class="botonIngresar">
+                        <a href="./administrar.html" class="boton">Ingresar al modo Administrador</a>
+                    </div>
                     
                     <%
-                
+                }else{
+                    try{
+                        String q = "select * from users";
+                        String username,pass;
+                        username = request.getParameter("usuario");
+                        pass = request.getParameter("password");
+                        boolean rep=false;
+
+                        set = con.createStatement();
+                        rs = set.executeQuery(q);
+                        while(rs.next()){
+                            if(rs.getString("usu").equals(username)&&rs.getString("pass").equals(pass)){
+                                int id = rs.getInt("id");
+                                rep = true;
+                            }
+                        }
+                        if(rep){
+                            %>
+                            <nav>
+                                <div class="BN-I">
+                                    <ul class="Principales">
+                                        <li id="full"><a class="link" href="./index.html">Inicio</a></li>
+                                        <li id="full"><a class="link" id="productos">Productos</a>
+                                            <ul class="sub-link">
+                                                <li class="subL" id="full"><a>Helados</a></li>
+                                                <li class="subL" id="full"><a>Ofertas</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="full"><a class="link" href="./conocenos.html">Conocenos</a></li>
+                                        <li id="full"><a class="link" href="./compra.html">Carrito</a></li>
+                                    </ul>
+                                </div>
+                                <div class="BN-D">
+                                    <a class="link" id="full" href="./usuario.jsp"><%=username%></a>
+                                </div>
+                            </nav>
+                            <h1 id=hip>Ben and Jerry's</h1>
+
+                            <div class="container">
+                                <img src="./img/prueba.jpg" width="1200px" height="500px" id="otro">
+                            </div>
+                            <div class="inform">
+                                <div>
+                                    <p id=burn>Descubre una sabor que mueva tus sentidos</p>
+                                    <p>Contamos con gran variedad de sabores que te haran tener una experiencia unica en tu boca</p>
+                                    <p id=dis>¡¡¡DISFRUTALOS!!!</p>
+                                </div>
+                                <img src="./img/sensa.jpg" width="500px" height="300px">
+                            </div>
+                            <div class="inform">
+                                <img src="./img/INGR.jpg" width="500px" height="300px">
+                                <div>
+                                    <p id=burn>Ingredientes conscientes</p>
+                                    <p>¡Nuestros ingredientes promueven un cambio positivo y eso hace que nuestro helado tenga un sabor</p>
+                                    <p id=dis>¡¡¡sensacional!!!</p>
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <nav>
+                                <div class="BN-I">
+                                    <ul class="Principales">
+                                        <li id="full"><a class="link" href="./index.html">Inicio</a></li>
+                                        <li id="full"><a class="link" id="productos">Productos</a>
+                                            <ul class="sub-link">
+                                                <li class="subL" id="full"><a>Helados</a></li>
+                                                <li class="subL" id="full"><a>Ofertas</a></li>
+                                            </ul>
+                                        </li>
+                                        <li id="full"><a class="link" href="./conocenos.html">Conocenos</a></li>
+                                        <li id="full"><a class="link" href="./compra.html">Carrito</a></li>
+                                    </ul>
+                                </div>
+                                <div class="BN-D">
+                                    <a class="link" id="full" href="./login.html">Log In/Sign In</a>
+                                </div>
+                            </nav>
+                            <div class="body-container">
+                                <form name="IniciarSesion" method="POST" action="">
+                                    <h1>Iniciar Sesion</h1>
+                                    <p>No se encontro regsitros</p>
+                                    <div class="row-wrapper">
+                                        <div class="column-wrapper">
+                                            <label>Username</label>
+                                            <br>
+                                            <input type="text" readonly="readonly" class="error" name="err1">
+                                            <br>
+                                            <div class="escribir"><div class="icon"><i class="fas fa-user"></i></div><input type="text" name="usuario" onkeypress="return validarUsu(event)" class="answer"></div>
+                                        </div>
+                                        <div class="column-wrapper">
+                                            <label>Contraseña</label>
+                                            <br>
+                                            <input type="text" readonly="readonly" class="error" name="err2">
+                                            <br>
+                                            <div class="escribir"><div class="icon"><i class="fas fa-lock"></i></div><input type="text" name="password" onkeypress="return validarPass(event)" class="answer"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row-wrapper">
+                                        <div class="column-wrapper-boton">
+                                            <input type="submit" value="Iniciar Sesion" class="boton" onclick="return validarDatos()">
+                                        </div>
+                                        <div class="column-wrapper-boton">
+                                            <div class="boton"><a href="./register.html">Registrar</a></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <%
+                        }
+                        set.close();
+
+
+                    }catch(SQLException ed){
+                        System.out.println("Error al registrar en la tabla");
+                        System.out.println(ed.getMessage());
+                        %>
+
+                        <h1>Error</h1>
+
+                        <%
+
+                    }
+                    con.close();
                 }
-                con.close();
             
             }catch(Exception e){
                 System.out.println("Error al conectar con la bd");
@@ -208,5 +234,6 @@
             </div>
         </footer>
     </div>
+    <script src="./js/login.js"></script>
     </body>
 </html>

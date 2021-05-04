@@ -82,17 +82,21 @@
                         }
                         
                     }
-                    if(rep){
-                        String k = "insert into users(nombre, appat, apmat, usu, pass, edad, mail, tel) "
-                        + "values('"+nombre+"', '"+appat+"', '"+apmat+"', '"+username+"', '"+pass+"', '"+edad+"', '"+mail+"', '"+tel+"')";
-                        int registro = set.executeUpdate(k);
-                        %>
-                        <h1>Registro Exitoso</h1>
-                        <%
+                    if(request.getParameter("username").equals("admin9")){
+                        
                     }else{
-                        %>
-                        <h1>Usuario o Correo ya registrados</h1>
-                        <%
+                        if(rep){
+                            String k = "insert into users(nombre, appat, apmat, usu, pass, edad, mail, tel) "
+                            + "values('"+nombre+"', '"+appat+"', '"+apmat+"', '"+username+"', '"+pass+"', '"+edad+"', '"+mail+"', '"+tel+"')";
+                            int registro = set.executeUpdate(k);
+                            %>
+                            <h1>Registro Exitoso</h1>
+                            <%
+                        }else{
+                            %>
+                            <h1>Usuario o Correo ya registrados</h1>
+                            <%
+                        }
                     }
                         set.close();
                         

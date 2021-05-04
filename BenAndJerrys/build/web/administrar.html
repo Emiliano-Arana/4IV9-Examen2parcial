@@ -16,16 +16,13 @@
             <div class="BN-I">
                 <ul class="Principales">
                     <li id="full"><a class="link" href="index.html">Cerrar Sesion</a></li>
-                    <li id="full"><a class="link" href="eliminarProducto.html">Eliminar</a></li>
-                    <li id="full"><a class="link" href="editarProducto.html">Actualizar</a></li>
+                    <li id="full"><a class="link" href="eliminarProducto.jsp">Eliminar</a></li>
+                    <li id="full"><a class="link" href="editarProducto.jsp">Actualizar</a></li>
                 </ul>
-            </div>
-            <div class="BN-D">
-                <a id="full" class="link">Administrador</a>
             </div>
         </nav>
         <div class="body-container">
-            <form name="DatosProducto" method="POST" action="" class="formAdd">
+            <form name="DatosProducto" method="POST" action="agregarProducto.jsp" class="formAdd">
                 <h1>Agregar Productos</h1>
                 <div class="row-wrapper">
                     <div class="column-wrapper">
@@ -62,26 +59,7 @@
                 <div class="botonCRUD">
                     <input type="submit" value="Agregar" class="boton" onclick="return validarDatos()">
                 </div>
-            </form>
-            <div class="productos">
-                <table>
-                    <tr class="head">
-                        <td>ID</td>
-                        <td>Producto</td>
-                        <td>Precio</td>
-                    </tr>
-                    <tr>
-                        <td id="id">2</td>
-                        <td id="producto">Chocolate</td>
-                        <td id="precio">$20</td>
-                    </tr>
-                    <tr>
-                        <td id="id">2</td>
-                        <td id="producto">Chocolate</td>
-                        <td id="precio">$20</td>
-                    </tr>
-                </table>
-            </div>
+            </form>   
         </div>
         <footer>
             <div class=nombres>

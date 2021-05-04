@@ -1,6 +1,6 @@
 function validarProduct(e){
     var teclado = (document.all)?e.keyCode:e.which;
-    var patron = /[A-Za-zñáéíóú]/;
+    var patron = /[A-Za-zñáéíóú ]/;
     var prueba = String.fromCharCode(teclado);
     return patron.test(prueba);
 }

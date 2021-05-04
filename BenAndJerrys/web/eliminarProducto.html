@@ -20,9 +20,6 @@
                     <li id="full"><a class="link" href="editarProducto.html">Actualizar</a></li>
                 </ul>
             </div>
-            <div class="BN-D">
-                <a id="full" class="link">Administrador</a>
-            </div>
         </nav>
         <div class="body-container">
             <div class="productos">
@@ -33,7 +30,7 @@
                         <td>Precio</td>
                     </tr>
                     <tr>
-                        <form action="" name="eliminar" method="POST">
+                        <form action="eliminarProducto.jsp" name="eliminar" method="POST">
                             <td id="id"><input value="1" class="id" readonly="readonly" name="id"></td>
                             <td id="producto">Chocolate</td>
                             <td id="precio">$20</td>
@@ -41,11 +38,11 @@
                         </form>
                     </tr>
                     <tr>
-                        <form action="" name="eliminar" method="POST">
+                        <form action="eliminarProducto.jsp" name="eliminar" method="POST">
                             <td id="id"><input value="1" class="id" readonly="readonly" name="id"></td>
                             <td id="producto">Chocolate</td>
                             <td id="precio">$20</td>
-                            <td><input type="submit" value="Eliminar" onclick="return validarDatos()" class="tableButton"></td>
+                            <td><input type="submit" value="Eliminar" class="tableButton"></td>
                         </form>
                     </tr>
                 </table>
