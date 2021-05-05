@@ -30,7 +30,7 @@
         .formF{
             padding: 0;
             margin: 0;
-            
+            width: fit-content;
         }
 
         .linkF{

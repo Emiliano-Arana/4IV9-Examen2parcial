@@ -52,9 +52,9 @@
                     ResultSet rs = null;
 
                     String url, userName, password, driver;
-                    url = "mysql://r4cpqdasfj2w6lnr:rd78fipx9g5wgedd@frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/sjb1bpe9m53ayonq";
-                    userName = "r4cpqdasfj2w6lnr";
-                    password = "rd78fipx9g5wgedd";
+                    url = "jdbc:mysql://localhost/benandjerys";
+                    userName = "root";
+                    password = "Arm%2312%3927";
                     driver = "com.mysql.jdbc.Driver";
                     int id = Integer.parseInt(request.getParameter("idUsu"));
                     
@@ -233,11 +233,11 @@
                     }
                         con.close();
                     %>
-            <form>
-                <input type="text" class="dataF" name="user" value="<%=request.getParameter("username")%>">
+            <form action="borrarCuenta.jsp">
+                <input type="text" class="dataF" name="user" value="<%=request.getParameter("user")%>">
                 <input type="text" class="dataF" name="idUsu" value="<%=request.getParameter("idUsu")%>">
                     <div class="column-wrapper-boton">
-                        <div class="boton"><a href="./login.html">Borrar Cuenta</a></div>
+                        <div class="boton"><input type="submit" value="Borrar Cuenta" class="boton"></div>
                     </div>
             </form>
         </div>
