@@ -84,9 +84,9 @@
                     ResultSet rs = null;
 
                     String url, userName, password, driver;
-                    url = "jdbc:mysql://localhost/benandjerys";
-                    userName = "root";
-                    password = "Arm%2312%3927";
+                    url = "mysql://r4cpqdasfj2w6lnr:rd78fipx9g5wgedd@frwahxxknm9kwy6c.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/sjb1bpe9m53ayonq";
+                    userName = "r4cpqdasfj2w6lnr";
+                    password = "rd78fipx9g5wgedd";
                     driver = "com.mysql.jdbc.Driver";
                     try{
                         Class.forName(driver);
