@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/StyleForms.css">
+    <link rel="stylesheet" href="./css/StyleNav.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="https://kit.fontawesome.com/341b72a6e8.js" crossorigin="anonymous"></script>
+    <title>Administrar Datos</title>
+    <style>
+        .body-container{
+            margin-bottom: 750px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <nav>
+            <div class="BN-I">
+                <ul class="Principales">
+                    <li id="full"><a class="link" href="./index.html">Inicio</a></li>
+                    <li id="full"><a class="link" id="productos">Productos</a>
+                        <ul class="sub-link">
+                            <li class="subL" id="full"><a>Helados</a></li>
+                            <li class="subL" id="full"><a>Ofertas</a></li>
+                        </ul>
+                    </li>
+                    <li id="full"><a class="link" href="./conocenos.html">Conocenos</a></li>
+                    <li id="full"><a class="link">Carrito</a></li>
+                </ul>
+            </div>
+            <div class="BN-D">
+                <a class="link" id="full" href="./login.html">Log In/Sign In</a>
+            </div>
+        </nav>
+        <div class="body-container">
+            <form name="Registrar" action="" method="POST">
+                <h1>Actualizar Datos</h1>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Nombre</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err1">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="far fa-user"></i></div><input type="text" name="nombre" onkeypress="return validar(event)" class="answer"></div>
+                    </div>
+                    <div class="column-wrapper">
+                        <label>Username</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err2">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-user"></i></div><input type="text" name="username" onkeypress="return validarUsu(event)" class="answer"></div>
+                    </div>
+                </div>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Apellido Paterno</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err3">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="far fa-user"></i></div><input type="text" name="appat" onkeypress="return validar(event)" class="answer"></div>
+                    </div>
+                    <div class="column-wrapper">
+                        <label>Contraseña</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err4">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-lock"></i></div><input type="text" name="password" onkeypress="return validarPass(event)" class="answer"></div>
+                    </div>
+                </div>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Apellido Materno</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err5">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="far fa-user"></i></div><input type="text" name="apmat" onkeypress="return validar(event)" class="answer"></div>
+                    </div>
+                    <div class="column-wrapper">
+                        <label>Correo Electronico</label>
+                        <br>
+                        <input type="email" readonly="readonly" class="error" id="err6">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-envelope"></i></div><input type="email" name="mail" onkeypress="return validarMail(event)" class="answer"></div>
+                    </div>
+                </div>
+                <div class="row-wrapper">
+                    <div class="column-wrapper">
+                        <label>Edad</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err7">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="far fa-user"></i></div><input type="text" name="edad" onkeypress="return validarNum(event)" class="answer"></div>
+                    </div>
+                    <div class="column-wrapper">
+                        <label>Telefono</label>
+                        <br>
+                        <input type="text" readonly="readonly" class="error" id="err8">
+                        <br>
+                        <div class="escribir"><div class="icon"><i class="fas fa-phone-alt"></i></div><input type="text" name="tel" onkeypress="return validarNum(event)" class="answer"></div>
+                    </div>
+                </div>
+                <div class="row-wrapper">
+                    <div class="column-wrapper-boton">
+                        <input type="submit" value="Actualizar" class="boton" onclick="return validarDatos()">
+                    </div>
+                    <div class="column-wrapper-boton">
+                        <div class="boton"><a href="./login.html">Borrar Cuenta</a></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <h1 id=con>Contactanos</h1>
+            <div class=formulario>
+                <form action="" >
+                    <p id=dis>Formulario de contacto</p>
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" placeholder="Apellido" required>
+                    <input type="email" name="correo" placeholder="Correo" required>
+                    <textarea name="mensaje" placeholder="Escriba su mensaje" cols="30" rows="10" required></textarea>
+                    <input type="submit" value="Enviar" id="boton">
+                </form>
+            </div>
+            <div class="redes-sociales">
+                <ul>
+                    <li><a href="https://es-la.facebook.com/benandjerrys/"><p id=facebook><i class="fab fa-facebook-square fa-3x"></i></p></a></li>
+                    <li><a href="https://www.instagram.com/benandjerrys/?hl=es"><p id="instagram"><i class="fab fa-instagram-square  fa-3x"></i></p></a></li>
+                    <li><p id="correo"><i class="fas fa-envelope fa-3x"></i></p></li>
+                    <li><a href="https://twitter.com/benandjerrys"><p id="twitter"><i class="fab fa-twitter-square fa-3x" ></i></p></a></li>
+                </ul>
+            </div>
+            <div class=nombres>
+                <p id="nom">Hecho por</p>
+                <br>
+                <p id="nom">Arana Chavez Emiliano</p>
+                <br>
+                <p id="nom">Lizarraga Anguiano Jesus Adrian</p>
+                <br>
+                <p id="nom">Núñez Manrique Cuauhtemoc Emmanuel</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/register.js"></script>
+</body>
+</html>
